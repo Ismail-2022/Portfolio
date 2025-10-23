@@ -1,0 +1,322 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --light-text: #6b7280;
+    --bg-color: #ffffff;
+    --section-bg: #f9fafb;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    padding: 1rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #fbbf24;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--section-bg);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+#about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: var(--light-text);
+}
+
+/* GitHub Username Input */
+.github-username-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.github-username-input label {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.github-username-input input {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    min-width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+.github-username-input input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.github-username-input button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.github-username-input button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Loading and Error Messages */
+.loading {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin: 2rem 0;
+}
+
+.error-message {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--error-color);
+    background-color: #fee;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+/* Repositories Grid */
+.repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.repo-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.repo-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.repo-card p {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+    min-height: 3rem;
+}
+
+.repo-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--light-text);
+}
+
+.repo-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.repo-language {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+}
+
+.repo-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.125rem;
+    color: var(--light-text);
+}
+
+#contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .github-username-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .github-username-input input {
+        min-width: 100%;
+    }
+
+    .repos-grid {
+        grid-template-columns: 1fr;
+    }
+}

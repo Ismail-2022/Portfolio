@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio showcasing my GitHub projects and repositories">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Hi, I'm <span class="highlight">Your Name</span></h2>
+                <p class="subtitle">Software Developer | Open Source Enthusiast</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! I'm passionate about building innovative software solutions. 
+                   Check out my projects below to see what I've been working on.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>My GitHub Projects</h2>
+                <div class="github-username-input">
+                    <label for="username">Enter GitHub Username:</label>
+                    <input type="text" id="username" placeholder="e.g., octocat">
+                    <button id="fetch-repos">Fetch Repositories</button>
+                </div>
+                <div id="loading" class="loading" style="display: none;">Loading repositories...</div>
+                <div id="error-message" class="error-message" style="display: none;"></div>
+                <div id="repos-container" class="repos-grid"></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out to me on <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
