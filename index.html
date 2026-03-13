@@ -339,60 +339,81 @@
                 <div class="projects-grid">
                     <article class="project-card" data-animate>
                         <div class="project-header">
-                            <p class="project-tag">Computer Vision</p>
-                            <h3>InsightCam</h3>
+                            <p class="project-tag">Computer Vision · Generative AI</p>
+                            <h3>Brain Tumour Detection (Diffusion + ViT)</h3>
                         </div>
                         <p class="project-desc">
-                            Real-time defect detection pipeline for manufacturing lines using transformer-based vision models and edge deployment.
+                            Trained a custom diffusion model to generate a synthetic brain MRI dataset, then fine-tuned a custom Vision Transformer to detect tumours—improving robustness when real labelled data is limited.
                         </p>
                         <div class="project-stack">
                             <span>Python</span>
                             <span>PyTorch</span>
-                            <span>Transformers</span>
-                            <span>Docker</span>
+                            <span>Diffusion Models</span>
+                            <span>Vision Transformer</span>
                         </div>
                         <div class="project-actions">
-                            <a class="btn primary" href="https://github.com/username/insightcam" target="_blank" rel="noopener">GitHub</a>
+                            <a class="btn primary" href="#" aria-disabled="true">GitHub</a>
                             <a class="btn ghost" href="#" aria-disabled="true">View Demo</a>
                         </div>
                     </article>
 
                     <article class="project-card" data-animate>
                         <div class="project-header">
-                            <p class="project-tag">Time Series</p>
-                            <h3>PulseForecast</h3>
+                            <p class="project-tag">LLMs · Retrieval</p>
+                            <h3>localGPT (Local RAG for PDFs)</h3>
                         </div>
                         <p class="project-desc">
-                            Hierarchical forecasting solution combining probabilistic models and feature stores to optimize retail inventory for 800+ stores.
+                            Built a local RAG system to ingest long PDFs and answer user queries with grounded citations. Deployed on a remote machine to keep retrieval + inference responsive for real client workflows.
                         </p>
                         <div class="project-stack">
                             <span>Python</span>
-                            <span>Prophet</span>
-                            <span>Spark</span>
-                            <span>Airflow</span>
+                            <span>RAG</span>
+                            <span>Embeddings</span>
+                            <span>Vector DB</span>
                         </div>
                         <div class="project-actions">
-                            <a class="btn primary" href="https://github.com/username/pulse-forecast" target="_blank" rel="noopener">GitHub</a>
-                            <a class="btn ghost" href="#" aria-disabled="true">Details</a>
+                            <a class="btn primary" href="#" aria-disabled="true">GitHub</a>
+                            <a class="btn ghost" href="#" aria-disabled="true">View Demo</a>
                         </div>
                     </article>
 
                     <article class="project-card" data-animate>
                         <div class="project-header">
-                            <p class="project-tag">NLP</p>
-                            <h3>DialogMind</h3>
+                            <p class="project-tag">Automation · RPA</p>
+                            <h3>Email Automation (Inventory + Planner)</h3>
                         </div>
                         <p class="project-desc">
-                            Customer support assistant leveraging instruction-tuned LLMs with retrieval augmentation for high-quality, compliant responses.
+                            Implemented an event-driven workflow where specific incoming emails are parsed to extract key fields, update inventory records, and create structured Planner tasks—reducing manual ops work and improving SLA response times.
+                        </p>
+                        <div class="project-stack">
+                            <span>Power Automate</span>
+                            <span>Outlook</span>
+                            <span>Microsoft Planner</span>
+                            <span>Workflow Orchestration</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="btn primary" href="#" aria-disabled="true">GitHub</a>
+                            <a class="btn ghost" href="#" aria-disabled="true">View Demo</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-animate>
+                        <div class="project-header">
+                            <p class="project-tag">Computer Vision · Apps</p>
+                            <h3>Cat vs Dog Classifier (CNN + ViT)</h3>
+                        </div>
+                        <p class="project-desc">
+                            Trained convolutional and Vision Transformer models for cat–dog image classification, then wrapped the best-performing model in a Streamlit app so non-technical users can upload images and get instant predictions.
                         </p>
                         <div class="project-stack">
                             <span>Python</span>
-                            <span>Transformers</span>
-                            <span>LangChain</span>
-                            <span>Vector DB</span>
+                            <span>PyTorch</span>
+                            <span>CNN</span>
+                            <span>Vision Transformer</span>
+                            <span>Streamlit</span>
                         </div>
                         <div class="project-actions">
-                            <a class="btn primary" href="https://github.com/username/dialogmind" target="_blank" rel="noopener">GitHub</a>
+                            <a class="btn primary" href="#" aria-disabled="true">GitHub</a>
                             <a class="btn ghost" href="#" aria-disabled="true">View Demo</a>
                         </div>
                     </article>
@@ -400,6 +421,7 @@
             </div>
         </section>
 
+        <!--    Certifications Section 
         <section id="certifications">
             <div class="container certs-wrapper">
                 <div class="section-heading">
@@ -431,7 +453,7 @@
                 </div>
             </div>
         </section>
-
+        -->
         <section id="cv">
             <div class="container cv-wrapper">
                 <div class="cv-card" data-animate>
@@ -443,8 +465,8 @@
                             to build scalable data products.
                         </p>
                         <div class="cv-actions">
-                            <a class="btn primary large" href="docs/Ismail_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-                            <a class="btn ghost" href="docs/Ismail_CV_preview.pdf" target="_blank" rel="noopener">Preview</a>
+                            <a class="btn primary large" href="docs/Ismail_Data_Scientist_CV.pdf" download="docs/Ismail_Data_Scientist_CV.pdf" rel="noopener">Download CV</a>
+                            <a class="btn ghost" href="docs/Ismail_Data_Scientist_CV.pdf" target="_blank" rel="noopener">Preview</a>
                         </div>
                     </div>
                     <div class="cv-preview">
@@ -482,15 +504,15 @@
                         </p>
                     </div>
                     <div class="contact-socials">
-                        <a href="https://linkedin.com/in/ismail" target="_blank" rel="noopener">
+                        <a href="https://www.linkedin.com/in/mismail0" target="_blank" rel="noopener">
                             <span class="icon">in</span>
                             <span>LinkedIn</span>
                         </a>
-                        <a href="https://github.com/ismail" target="_blank" rel="noopener">
+                        <a href="https://github.com/Ismail-2022" target="_blank" rel="noopener">
                             <span class="icon">GH</span>
                             <span>GitHub</span>
                         </a>
-                        <a href="mailto:hello@ismail.dev">
+                        <a href="mailto:m.ismail4543@gmail.com">
                             <span class="icon">@</span>
                             <span>Email</span>
                         </a>
@@ -523,13 +545,13 @@
         <div class="container footer-content">
             <p>© <span id="year"></span> Ismail — Data Scientist & ML Enthusiast.</p>
             <div class="footer-socials">
-                <a href="https://linkedin.com/in/ismail" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/mismail0" target="_blank" rel="noopener" aria-label="LinkedIn">
                     <span>in</span>
                 </a>
-                <a href="https://github.com/ismail" target="_blank" rel="noopener" aria-label="GitHub">
+                <a href="https://github.com/Ismail-2022" target="_blank" rel="noopener" aria-label="GitHub">
                     <span>GH</span>
                 </a>
-                <a href="mailto:hello@ismail.dev" aria-label="Email">
+                <a href="mailto:m.ismail4543@gmail.com" aria-label="Email">
                     <span>@</span>
                 </a>
             </div>
