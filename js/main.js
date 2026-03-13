@@ -92,9 +92,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            contactForm.reset();
-            feedback.textContent = 'Thank you! Your message has been recorded.';
-            feedback.classList.add('success');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { Accept: 'application/json' }
+            })
+                .then((res) => {
+                    if (res.ok) {
+                        contactForm.reset();
+                        feedback.textContent = 'Thank you! Your message has been sent.';
+                        feedback.classList.add('success');
+                    } else {
+                        feedback.textContent = 'Something went wrong. Please try again or email me directly.';
+                        feedback.classList.add('error');
+                    }
+                })
+                .catch(() => {
+                    feedback.textContent = 'Something went wrong. Please try again or email me directly.';
+                    feedback.classList.add('error');
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                });
         });
     };
 
